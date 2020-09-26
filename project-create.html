@@ -235,9 +235,11 @@
                             <div class="col-sm-12 col-md-12 col-xs-12">
                               <div class="form-group">
                                 <label for="role">Assigned Manager</label>
-                                  <select name="roleid" id="roleid" class="custom-select" th:field="*{manager}" required="required">
-                                    <option th:value="'USR001'" th:text="Craig"></option>
-                                    <option th:value="'USR002'" th:text="Delisa"></option>
+                                  <select name="roleid" id="roleid" class="custom-select" required="required">
+                                    <option value="Craig">Craig</option>
+                                    <option value="Delisa">Delisa</option>
+                                    <option value="Craig">Norre</option>
+                                    <option value="Craig">Jark</option>
                                   </select>
                                 <div class="invalid-feedback">Please choose manager</div>
                               </div>
