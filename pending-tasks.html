@@ -160,7 +160,7 @@
                         <a class="nav-link" href="task-assign.html">Task Assign</a>
                       </li>
                       <li class="nav-item">
-                        <a class="nav-link" href="project-status.html">Peoject Status</a>
+                        <a class="nav-link" href="project-status.html">Project Status</a>
                       </li>
                     </ul>
                   </div>
@@ -199,169 +199,173 @@
       <!-- wrapper  -->
       <!-- ============================================================== -->
       <div class="dashboard-wrapper">
-    
         <div class="dashboard-ecommerce">
           <div class="container-fluid dashboard-content">
-          <div class="ecommerce-widget">
+            <div class="ecommerce-widget">
 
-            <div class="row">
-              <div class="col-lg-6 col-md-12">
+              <div class="row">
+                <div class="col-md-12">
                   <section class="panel panel-transparent">
                     <header class="panel-heading">
-                        <h2 class="panel-title">Project Create</h2>
+                      <h2 class="panel-title">Task Assign</h2> 
                     </header>
                     <div class="panel-body">
-                        <form id="needs-validation" novalidate action=#>  
-                          
-                          <div class="row">  
-                            <div class="col-sm-12 col-md-12 col-xs-12">  
-                              <div class="form-group">  
-                                <label for="firstname">Project Name</label>  
-                                <input type="text" id="firstname" class="form-control" aria-describedby="inputGroupPrepend" required />  
-                                <div class="invalid-feedback">Please enter project name</div>  
-                              </div>  
-                            </div>
-                                
-                            <div class="col-sm-12 col-md-12 col-xs-12">  
-                              <div class="form-group">  
-                                <label for="lastname">Project Code</label>  
-                                <input type="text" id="lastname" class="form-control" aria-describedby="inputGroupPrepend" required />  
-                                <div class="invalid-feedback">Please enter project code</div>  
-                              </div>  
-                            </div>  
-                          </div>  
-                          
-                          <div class="row">  
-                            <div class="col-sm-12 col-md-12 col-xs-12">
-                              <div class="form-group">
-                                <label for="role">Assigned Manager</label>
-                                  <select name="roleid" id="roleid" class="custom-select" required="required">
-                                    <option value="Craig">Craig</option>
-                                    <option value="Delisa">Delisa</option>
-                                    <option value="Craig">Norre</option>
-                                    <option value="Craig">Jark</option>
-                                  </select>
-                                <div class="invalid-feedback">Please choose manager</div>
-                              </div>
-                            </div>
-                          </div>  
+                      <form id="needs-validation" novalidate action="/task/employee/edit/0" method="post">
 
-                          <div class="row">
-                            <div class="col-sm-4 col-md-6 col-xs-12">
-                              <div class="form-group">
-                                <label for="code">Project Start Date</label>
-                                  <div class="input-group date" id="datetimepickerStart" data-target-input="nearest">
-                                    <input type="date"/>
-                                  </div>
+                        <div class="row">
+                          <div class="col-sm-6 col-md-6 col-xs-12">
+                            <div class="form-group">
+                              <label for="manager">Project</label>
+                              <select  name="project" class="custom-select" required disabled="disabled">
+                              <option value="">Select</option>
+                              <option value="PRJ001">PRJ001-Human Resource CRM</option>
+                              <option value="PRJ002">PRJ002-Infra Upgrade</option>
+                              </select>
+                            </div>
+                          </div>
+                        </div>
+
+                        <div class="row">
+                          <div class="col-sm-6 col-md-6 col-xs-12">
+                            <div class="form-group">
+                              <label for="user">Assigned Employee</label>
+                              <select  name="user"  class="custom-select" required disabled="disabled">
+                              <option value="">Select</option>
+                              <option value="admin@cybertek.com">John Kesy</option>
+                              <option value="T001@cybertek.com">Delisa Norre</option>
+                              <option value="P001@cybertek.com">Craig Jark</option>
+                              <option value="S001@cybertek.com">Shaun Hayns</option>
+                              </select>
+                              <div class="invalid-feedback">Please choose employee</div>
+                            </div>
+                          </div>
+                        </div>
+
+                        <div class="row">
+                          <div class="col-sm-6 col-md-6 col-xs-12">
+                            <div class="row">
+                              <div class="col-sm-12 col-md-12 col-xs-12">
+                                <div class="form-group">
+                                  <label for="detail">Task Subject</label>
+                                  <input type="text"  class="form-control" aria-describedby="inputGroupPrepend" required disabled="disabled" id="title" name="title" value=""/> </div>
                               </div>
                             </div>
-                  
-                            <div class="col-sm-4 col-md-6 col-xs-12">
-                              <div class="form-group">
-                                <label for="code">Project End Date</label>
-                                <div class="input-group date" id="datetimepickerStart" data-target-input="nearest">
-                                  <input type="date"/>
+                          </div>
+                        </div>
+
+                        <div class="row">
+                          <div class="col-sm-6 col-md-6 col-xs-12">
+                            <div class="row">
+                              <div class="col-sm-12 col-md-12 col-xs-12">
+                                <div class="form-group">
+                                  <label for="detail">Detail</label>
+                                  <textarea class="form-control" rows="3" aria-describedby="inputGroupPrepend" required disabled="disabled" id="content" name="content"></textarea>
                                 </div>
                               </div>
                             </div>
                           </div>
-                          
-                          <div class="row">
-                            <div class="col-sm-12 col-md-12 col-xs-12">
-                              <div class="form-group">
-                                <label for="detail">Project Detail</label>
-                                  <textarea class="form-control" rows="3" id="detail" aria-describedby="inputGroupPrepend" required></textarea>
-                              </div>
+                        </div>
+
+                        <div class="row">
+                          <div class="col-sm-6 col-md-6 col-xs-12">
+                            <div class="form-group">
+                              <label for="code">Status</label>
+                              <select name="status" class="custom-select" required >
+                              <option value="">Select</option>
+                              <option value="OPEN">Open</option>
+                              <option value="IN_PROGRESS">In Progress</option>
+                              <option value="UAT_TEST">UAT Testing</option>
+                              <option value="COMPLETED">Completed</option>
+                              </select>
+                              <div class="invalid-feedback">Please choose Status</div>
                             </div>
                           </div>
-                             
-                          <div class="row">  
-                            <div class="col-sm-12 col-md-12 col-xs-12">  
-                              <div class="float-right">  
-                                <button class="btn btn-success rounded-0" type="submit" onclick="return Validate()">Save</button>  
-                              </div>                            
-                            </div>  
-                          </div> 
-                           
-                        </form>
+                        </div>
+
+                        <div class="row">
+                          <div class="col-sm-6 col-md-6 col-xs-12">
+                            <div class="float-right">
+                              <button class="btn btn-success rounded-0" type="submit">Save</button>
+                            </div>
+                          </div>
+                        </div>
+
+                      </form>
                     </div>
                   </section>
-              </div>
-            </div>
-          </div>
-          
-          <!-- footer -->
-          <footer class="page-footer font-small blue fixed-bottom">
-            <div class="footer-copyright text-center py-3">© 2020 Cybertek – All Rights Reserved:</div>
-          </footer>
-        </div>
-      </div>
-      
-      <div class="row">
-        <div class="col-lg-12 col-md-12">
-          <div class="col-md-12">
-            <section class="panel">
-              <header class="panel-heading">
-                <h2 class="panel-title">Project List</h2>
-              </header>
-              <div class="panel-body">
-                <div class="table-responsive">
-                  <table class="table table-striped">
-                    <thead>
-                      <tr>
-                        <th>Project Code</th>
-                        <th>Project Name</th>
-                        <th>Start/End Date</th>
-                        <th>Manager</th>
-                        <th>Status</th>
-                        <th>Action</th>
-                      </tr>
-                    </thead>
-                    <tbody>
-                      <tr>
-                        <td>PR001</td>
-                        <td>Durango</td>
-                        <td>10/10/20 - 4/10/20</td>
-                        <td>Mike</td>
-                        <td>In Progress</td>
-                        <td>
-                          <a class="btn btn-warning rounded-0">Update</a>
-                          <a class="btn btn-danger rounded-0">Delete</a>
-                          <a class="btn btn-info rounded-0">Complete</a>
-                        </td>
-                      </tr>
-                      <tr>
-                        <td>PR002</td>
-                        <td>Apollo</td>
-                        <td>03/05/19 - 03/06/20</td>
-                        <td>Tom</td>
-                        <td>Completed</td>
-                        <td>
-                          <a class="btn btn-warning rounded-0">Update</a>
-                          <a class="btn btn-danger rounded-0">Delete</a>
-                          <a class="btn btn-info rounded-0">Complete</a>
-                        </td>
-                      </tr>
-                      <tr>
-                        <td>PR003</td>
-                        <td>X Lab</td>
-                        <td>05/04/20 - 12/20/20</td>
-                        <td>Ammy</td>
-                        <td>Open</td>
-                        <td>
-                          <a class="btn btn-warning rounded-0">Update</a>
-                          <a class="btn btn-danger rounded-0">Delete</a>
-                          <a class="btn btn-info rounded-0">Complete</a>
-                        </td>
-                      </tr>
-                    </tbody>
-                  </table>
                 </div>
               </div>
+              <br>
+              <br>
+
+              <div class="row">
+                <div class="col-lg-12 col-md-12">
+                  <div class="col-md-12">
+                    <section class="panel">
+                      <header class="panel-heading">
+                        <h2 class="panel-title">Task List</h2>
+                      </header>
+                      <div class="panel-body">
+                        <div class="table-responsive">
+                          
+                          <table class="table table-striped">
+                            <thead>
+                              <tr>
+                                <th>Project</th>
+                                <th>Task Subject</th>
+                                <th>Assigned Employee</th>
+                                <th>Assigned Date</th>
+                                <th>Status</th>
+                                <th>Action</th>
+                              </tr>
+                            </thead>
+
+                            <tbody>
+                              <tr>
+                                <td>PRJ001-Human Resource CRM</td>
+                                <td>Database Connection</td>
+                                <td>John Kesy</td>
+                                <td>09/24/2020 14:33</td>
+                                <td>In Progress</td>
+                                <td class="actions">
+                                  <a href=""><button type="button" class="btn btn-warning btn-sm">Update</button></i></a>
+                                </td>
+                              </tr>
+                              <tr>
+                                <td>PRJ001-Human Resource CRM</td>
+                                <td>Database Connection</td>
+                                <td>John Kesy</td>
+                                <td>09/24/2020 14:33</td>
+                                <td>In Progress</td>
+                                <td class="actions">
+                                  <a href=""><button type="button" class="btn btn-warning btn-sm">Update</button></i></a>
+                                </td>
+                              </tr>
+                              <tr>
+                                <td>PRJ001-Human Resource CRM</td>
+                                <td>Database Connection</td>
+                                <td>John Kesy</td>
+                                <td>09/24/2020 14:33</td>
+                                <td>In Progress</td>
+                                <td class="actions">
+                                  <a href=""><button type="button" class="btn btn-warning btn-sm">Update</button></i></a>
+                                </td>
+                              </tr>
+                            </tbody>
+                          </table>
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </div>
+              </div>
+              
+              </section>
+            </div>
             </section>
           </div>
-        </div>
-      </div>
+      
+
       <!-- ============================================================== -->
       <!-- end wrapper  -->
       <!-- ============================================================== -->
